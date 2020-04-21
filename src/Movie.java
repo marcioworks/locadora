@@ -4,8 +4,9 @@ import java.util.Date;
 
 public class Movie {
 
-	private String titulo;
-	private Date lancamento;
+	private String title;
+	private Date release;
+	private String genre;
 	
 	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	
@@ -16,30 +17,39 @@ public class Movie {
 	}
 
 	public Movie(String titulo, Date lancamento) {
-		this.titulo = titulo;
-		this.lancamento = lancamento;
+		this.title = titulo;
+		this.release = lancamento;
 	}
 
 	public String getTitulo() {
-		return titulo;
+		return title;
 	}
 
 	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+		this.title = titulo;
 	}
 
 	public Date getLancamento() {
-		return lancamento;
+		return release;
 	}
 
 	public void setLancamento(String lancamento) throws ParseException {
-		this.lancamento = sdf.parse(lancamento);
+		this.release = sdf.parse(lancamento);
 	}
 
+	public String getGenre() {
+		return genre;
+	}
+
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+	
 	@Override
 	public String toString() {
-		return "Titulo:" + titulo + ", ano de lançamento= " +sdf.format(lancamento);
+		return "Titulo:" + title + ", ano de lançamento= " +sdf.format(release);
 	}
+
 	
 	
 
