@@ -1,15 +1,29 @@
 import java.text.ParseException;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Program {
 
 	public static void main(String[] args) throws ParseException {
 		// TODO Auto-generated method stub
+		List<Movie> list = new LinkedList<Movie>();
 		
-		Movie m = new Movie();
-		m.setTitulo("velozes");
-		m.setLancamento("22/03/1990");
+		Scanner sc = new Scanner(System.in);
 		
-		System.out.println(m);
+		Menu.callMenu();
+		int opcao = sc.nextInt();
+		switch (opcao) {
+		case 1: {
+			
+			
+		}
+		default:
+			throw new IllegalArgumentException("Unexpected value: " + opcao);
+		}
+		
+		
+		
 
 	}
 
