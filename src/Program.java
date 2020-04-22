@@ -14,13 +14,14 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 
 		int opcao = 6;
-		do {
+		while (opcao != 0) {
 			System.out.println();
 			Menu.callMenu();
 			System.out.println("Escolha uma opção");
 			opcao = sc.nextInt();
+			
 			switch (opcao) {
-			case 0:{
+			case 0: {
 				System.out.println("OBRIGADO POR USAR NOSSO SISTEMA.");
 				break;
 			}
@@ -31,11 +32,28 @@ public class Program {
 				}
 				break;
 			}
+			case 2: {
+				System.out.print("Titulo do filme: ");
+				sc.nextLine();
+				String titulo = sc.nextLine();
+				System.out.print("ano e Lançamento: ");
+				String release = sc.nextLine();
+				System.out.print("Genero do filme: ");
+				String Genero = sc.nextLine();
+				list.add(new Movie(titulo, sdf.parse(release), Genero));
+				
+				System.out.println("Filme adcionado a lista.");
+				break;
+			}
+			case 3:{
+				
+				break;
+			}
 			default:
 				System.out.println("opcao invalida.");
 			}
-		} while (opcao != 0);
 
+		}
 	}
 
 }
