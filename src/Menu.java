@@ -7,6 +7,7 @@ public class Menu {
 		System.out.println("2- Cadastrar Filme");
 		System.out.println("3 - pesquisar Filme");
 		System.out.println("4 - pesquisar Filme");
+		System.out.println("5- Sair");
 	}
 	
 	public static void callMenu2() {

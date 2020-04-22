@@ -8,7 +8,7 @@ public class MockMovies {
 
 	public static void mockList(List<Movie> list) throws ParseException {
 		Movie m1 = new Movie("JUMANJI: PRÓXIMA FASE", sdf.parse("16/01/2020"), "comedia");
-		Movie m2 = new Movie(" AVES DE RAPINA", sdf.parse("06/02/2020"), "Ação");
+		Movie m2 = new Movie("AVES DE RAPINA", sdf.parse("06/02/2020"), "Ação");
 		Movie m3 = new Movie("SONIC", sdf.parse("13/02/2020"), "Ação/comedia");
 		Movie m4 = new Movie("DOLITTLE", sdf.parse("20/02/2020"), "Ação/Aventura");
 		Movie m5 = new Movie("MULAN", sdf.parse("26/03/2020"), "Ação/Aventura");
