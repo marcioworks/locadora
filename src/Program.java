@@ -1,6 +1,7 @@
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -8,7 +9,7 @@ public class Program {
 
 	public static void main(String[] args) throws ParseException {
 		// TODO Auto-generated method stub
-		List<Movie> list = new LinkedList<Movie>();
+		ArrayList<Movie> list = new ArrayList<Movie>();
 		MockMovies.mockList(list);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Scanner sc = new Scanner(System.in);
@@ -36,6 +37,7 @@ public class Program {
 				System.out.print("Titulo do filme: ");
 				sc.nextLine();
 				String titulo = sc.nextLine();
+				titulo = titulo.toUpperCase();
 				System.out.print("ano e Lançamento: ");
 				String release = sc.nextLine();
 				System.out.print("Genero do filme: ");
@@ -46,7 +48,16 @@ public class Program {
 				break;
 			}
 			case 3:{
-				
+				System.out.print("Nome do filme: ");
+				sc.nextLine();
+				String search = sc.nextLine();
+				search = search.toUpperCase();
+				for(Movie m: list) {
+					if(m.getTitulo().contains(search) ){
+						System.out.println(m.getTitulo());
+						System.out.println(list.indexOf(m ));
+					}
+				}
 				break;
 			}
 			default:
@@ -54,6 +65,7 @@ public class Program {
 			}
 
 		}
+		sc.close();
 	}
 
 }
