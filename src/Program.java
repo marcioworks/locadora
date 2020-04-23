@@ -93,7 +93,13 @@ public class Program {
 			case 5: {
 				System.out.print("digite o codigo do filme que deseja remover: ");
 				int cod = sc.nextInt();
-				Movie m = list.get(cod);
+				if (cod < 0 || cod >= list.size()) {
+					System.out.println("esse codigo nao pertence a nenhum filme");
+				}
+				else{
+					list.remove(cod);
+					System.out.println("filme removido com sucesso");
+				}
 				break;
 
 			}
