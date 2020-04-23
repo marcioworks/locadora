@@ -48,7 +48,7 @@ public class Movie {
 
 	@Override
 	public String toString() {
-		return "Titulo: " + title + ", ano de lançamento: " + sdf.format(release)+" Genero: "+genre;
+		return "Titulo: " + title + ", ano de lançamento: " + sdf.format(release)+", Genero: "+genre;
 	}
 
 }
