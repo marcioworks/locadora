@@ -74,18 +74,28 @@ public class Program {
 			case 4: {
 				System.out.print("digite o codigo do filme que deseja editar: ");
 				int cod = sc.nextInt();
-				Movie m = list.get(cod);
-				System.out.print("Novo Titulo: ");
-				sc.nextLine();
-				m.setTitulo(sc.nextLine());
-				System.out.print("Nova Data de Lançamento: ");
-				String data = sc.nextLine();
-				m.setLancamento(data);
-				System.out.print("Novo Genero: ");
-				m.setGenre(sc.nextLine());
-				System.out.println(m);
-
+				if (cod < 0 || cod >= list.size()) {
+					System.out.println("esse codigo nao pertence a nenhum filme");
+				} else {
+					Movie m = list.get(cod);
+					System.out.print("Novo Titulo: ");
+					sc.nextLine();
+					m.setTitulo(sc.nextLine());
+					System.out.print("Nova Data de Lançamento: ");
+					String data = sc.nextLine();
+					m.setLancamento(data);
+					System.out.print("Novo Genero: ");
+					m.setGenre(sc.nextLine());
+					System.out.println(m);
+				}
 				break;
+			}
+			case 5: {
+				System.out.print("digite o codigo do filme que deseja remover: ");
+				int cod = sc.nextInt();
+				Movie m = list.get(cod);
+				break;
+
 			}
 			default:
 				System.out.println("opcao invalida.");
