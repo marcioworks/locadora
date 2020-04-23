@@ -6,13 +6,10 @@ public class Menu {
 		System.out.println("1- Listar Filmes");
 		System.out.println("2- Cadastrar Filme");
 		System.out.println("3 - Pesquisar Filme");
-		System.out.println("4 - Remover Filme");
-		System.out.println("5- Sair");
+		System.out.println("4 - Editar Filme");
+		System.out.println("5- Remover Filme");
+		System.out.println("0- Sair");
 	}
 	
-	public static void callMenu2() {
-		System.out.println("1 - Editar Filme");
-		System.out.println("2 - Deletar Filme");
-	}
 	
 }

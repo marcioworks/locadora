@@ -20,7 +20,7 @@ public class Program {
 			Menu.callMenu();
 			System.out.println("Escolha uma opção");
 			opcao = sc.nextInt();
-			
+
 			switch (opcao) {
 			case 0: {
 				System.out.println("OBRIGADO POR USAR NOSSO SISTEMA.");
@@ -28,7 +28,7 @@ public class Program {
 			}
 			case 1: {
 				for (Movie m : list) {
-					System.out.println(m);
+					System.out.println("cod: " + list.indexOf(m) + ", " + m);
 
 				}
 				break;
@@ -43,21 +43,32 @@ public class Program {
 				System.out.print("Genero do filme: ");
 				String Genero = sc.nextLine();
 				list.add(new Movie(titulo, sdf.parse(release), Genero));
-				
+
 				System.out.println("Filme adcionado a lista.");
 				break;
 			}
-			case 3:{
+			case 3: {
 				System.out.print("Nome do filme: ");
 				sc.nextLine();
 				String search = sc.nextLine();
 				search = search.toUpperCase();
-				for(Movie m: list) {
-					if(m.getTitulo().contains(search) ){
-						System.out.println(m.getTitulo());
-						System.out.println(list.indexOf(m ));
+				ArrayList<Movie>lista = new ArrayList<Movie>();
+				for (Movie m : list) {
+					
+					if (m.getTitulo().contains(search)) {
+						lista.add(m);
 					}
 				}
+				if(lista.isEmpty()) {
+					System.out.println("Nao conseguimos encontrar nada com os dados informados!!");
+				}else {
+					System.out.println("encontramos esses filmes com os dados informados.");
+					System.out.println();
+					for (Movie m : lista) {
+						System.out.println(m);
+					}
+				}
+				
 				break;
 			}
 			default:
